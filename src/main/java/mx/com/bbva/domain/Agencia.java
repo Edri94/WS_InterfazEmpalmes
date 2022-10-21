@@ -15,7 +15,7 @@ public class Agencia implements Serializable {
     private int agencia;
 
     @Column(name = "descripcion_agencia")
-    private String descripcioAgencia;
+    private String descripcionAgencia;
 
     @Column(name = "prefijo_agencia")
     private String prefijoAgencia;
@@ -29,9 +29,9 @@ public class Agencia implements Serializable {
         this.agencia = agencia;
     }
 
-    public Agencia(int agencia, String descripcioAgencia, String prefijoAgencia) {
+    public Agencia(int agencia, String descripcionAgencia, String prefijoAgencia) {
         this.agencia = agencia;
-        this.descripcioAgencia = descripcioAgencia;
+        this.descripcionAgencia = descripcionAgencia;
         this.prefijoAgencia = prefijoAgencia;
     }
 
@@ -43,13 +43,15 @@ public class Agencia implements Serializable {
         this.agencia = agencia;
     }
 
-    public String getDescripcioAgencia() {
-        return descripcioAgencia;
+    public String getDescripcionAgencia() {
+        return descripcionAgencia;
     }
 
-    public void setDescripcioAgencia(String descripcioAgencia) {
-        this.descripcioAgencia = descripcioAgencia;
+    public void setDescripcionAgencia(String descripcionAgencia) {
+        this.descripcionAgencia = descripcionAgencia;
     }
+
+   
 
     public String getPrefijoAgencia() {
         return prefijoAgencia;
@@ -61,7 +63,7 @@ public class Agencia implements Serializable {
 
     @Override
     public String toString() {
-        return "Agencia{" + "agencia=" + agencia + ", descripcioAgencia=" + descripcioAgencia + ", prefijoAgencia=" + prefijoAgencia + '}';
+        return "Agencia{" + "agencia=" + agencia + ", descripcionAgencia=" + descripcionAgencia + ", prefijoAgencia=" + prefijoAgencia + '}';
     }
 
 }

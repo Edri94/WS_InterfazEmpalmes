@@ -27,7 +27,7 @@ public class testeando
         List<Agencia> agencias = query.getResultList();
         
         agencias.forEach(agencia -> {
-            System.out.println("Agencia: " + agencia.getDescripcioAgencia());
+            System.out.println("Agencia: " + agencia.getDescripcionAgencia());
         });
         
     }
