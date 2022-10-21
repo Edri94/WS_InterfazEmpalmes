@@ -1,0 +1,5 @@
+mx\com\bbva\domain\Agencia.class
+mx\com\bbva\data\CatalogosDaoImpl.class
+mx\com\bbva\data\CatalogosDao.class
+test\testeando.class
+mx\com\bbva\data\ConnectionPool.class
