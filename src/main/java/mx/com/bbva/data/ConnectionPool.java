@@ -30,47 +30,47 @@ public class ConnectionPool
         
     }
     
-    public Connection getConnection() 
-    {
-        try 
-        {
-            if(conn == null)
-        {
-            DriverManager.registerDriver(new net.sourceforge.jtds.jdbc.Driver());
-            conn = DriverManager.getConnection(baseUrl);
-            
-            return conn;
-        }
-        else 
-        {
-            return conn;
-        }
-        } 
-        catch (SQLException e) 
-        {
-            e.printStackTrace(System.out);
-            return null;
-        }
-        
-    }
-    
-    
-    public void closeConnection()
-    {
-        try 
-        {
-            if(conn != null)
-            {
-                conn.close();
-            }
-            else 
-            {
-                System.out.println("No existe una instancia de conexion a la base de datos");
-            }
-        } 
-        catch (SQLException e) 
-        {
-            e.printStackTrace(System.out);
-        }
-    }
+//    public Connection getConnection() 
+//    {
+//        try 
+//        {
+//            if(conn == null)
+//        {
+//            DriverManager.registerDriver(new net.sourceforge.jtds.jdbc.Driver());
+//            conn = DriverManager.getConnection(baseUrl);
+//            
+//            return conn;
+//        }
+//        else 
+//        {
+//            return conn;
+//        }
+//        } 
+//        catch (SQLException e) 
+//        {
+//            e.printStackTrace(System.out);
+//            return null;
+//        }
+//        
+//    }
+//    
+//    
+//    public void closeConnection()
+//    {
+//        try 
+//        {
+//            if(conn != null)
+//            {
+//                conn.close();
+//            }
+//            else 
+//            {
+//                System.out.println("No existe una instancia de conexion a la base de datos");
+//            }
+//        } 
+//        catch (SQLException e) 
+//        {
+//            e.printStackTrace(System.out);
+//        }
+//    }
 }

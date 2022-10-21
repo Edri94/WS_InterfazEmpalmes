@@ -3,27 +3,36 @@ package mx.com.bbva.domain;
 import java.io.Serializable;
 import javax.persistence.*;
 
-
 @Entity
 @Table(name = "AGENCIA")
-public class Agencia implements Serializable
-{
+@NamedQuery(name = "Agencia.encontrarTodasAgencias", query = "SELECT a FROM Agencia a ORDER BY a.agencia")
+public class Agencia implements Serializable {
+
     private static final long serialVersionUID = 1L;
-    
+
     @Column(name = "agencia")
     @Id
     private int agencia;
-    
+
     @Column(name = "descripcion_agencia")
     private String descripcioAgencia;
-    
-     @Column(name = "prefijo_agencia")
-    private String prefijoAgencia;   
-    
-     
-    public Agencia()
+
+    @Column(name = "prefijo_agencia")
+    private String prefijoAgencia;
+
+    public Agencia() 
     {
         
+    }
+
+    public Agencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    public Agencia(int agencia, String descripcioAgencia, String prefijoAgencia) {
+        this.agencia = agencia;
+        this.descripcioAgencia = descripcioAgencia;
+        this.prefijoAgencia = prefijoAgencia;
     }
 
     public int getAgencia() {
@@ -54,6 +63,5 @@ public class Agencia implements Serializable
     public String toString() {
         return "Agencia{" + "agencia=" + agencia + ", descripcioAgencia=" + descripcioAgencia + ", prefijoAgencia=" + prefijoAgencia + '}';
     }
-    
-    
+
 }

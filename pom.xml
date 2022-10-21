@@ -33,11 +33,18 @@
             <artifactId>hibernate-c3p0</artifactId>
             <version>5.3.6.Final</version>
         </dependency>
+<!--        JTDS-->
         <dependency>
             <groupId>net.sourceforge.jtds</groupId>
             <artifactId>jtds</artifactId>
             <version>1.3.1</version>
         </dependency>
+        <!--MSSQL JDBC-->
+<!--        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>11.2.0.jre8</version>
+        </dependency>-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
