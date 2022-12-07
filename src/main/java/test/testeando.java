@@ -19,7 +19,7 @@ public class testeando
     public static void main(String[] args) 
     {
         String hql = "SELECT a FROM Agencia a";
-        EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("my_persistence_unit");
+        EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("CatalogosPU");
         EntityManager em = fabrica.createEntityManager();
         
         Query query = em.createQuery(hql);

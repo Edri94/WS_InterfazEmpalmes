@@ -28,4 +28,15 @@ public class AgenciaServiceRS
         return agencias;
     }
     
+    @POST
+    @Consumes(value = MediaType.APPLICATION_JSON)
+    @Produces(value = MediaType.APPLICATION_JSON)
+    public Agencia agregarPersona(Agencia agencia)
+    {
+        ad.insertarAgencia(agencia);
+        System.out.println("agencia agregada: " + agencia);
+        
+        return agencia;
+    }
+    
 }

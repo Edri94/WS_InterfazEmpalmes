@@ -18,13 +18,29 @@ import javax.persistence.*;
 @Stateless //conviertiendo a un EJB
 public class AgenciaDaoImpl implements AgenciaDao{
     
-    @PersistenceContext(unitName = "my_persistence_unit")
+    @PersistenceContext(unitName = "CatalogosPU")
     EntityManager em;
 
     @Override
     public List<Agencia> encontrarTodasAgencias() 
     {
         return em.createNamedQuery("Agencia.encontrarTodasAgencias").getResultList();
+    }
+
+    @Override
+    public void insertarAgencia(Agencia agencia) {
+        em.persist(agencia);
+        em.flush();
+    }
+
+    @Override
+    public Agencia encontrarAgencia(Agencia agencia) {
+        return em.find(Agencia.class, agencia.getAgencia());
+    }
+
+    @Override
+    public void actualizarAgencia(Agencia agencia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

@@ -16,5 +16,7 @@ import mx.com.bbva.domain.Agencia;
 public interface AgenciaDao {
 
     public List<Agencia> encontrarTodasAgencias();
-    
+    public void insertarAgencia(Agencia agencia); 
+    public Agencia encontrarAgencia(Agencia agencia);
+    public void actualizarAgencia(Agencia agencia);
 }
